@@ -24,6 +24,9 @@ const theme = localStorage.getItem('theme');
 
 if (theme === 'dark') {
     body.classList.add('dark');
+    h1.innerText = 'NUIT 🌑'
+} else {
+    h1.innerText = 'JOUR ☀️'
 }
 
 const lightThemeBtn = document.querySelector('#lightThemeBtn');
