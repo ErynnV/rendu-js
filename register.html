@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-900">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="register.js" defer></script>
+  </head>
+  <body class="h-full">
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          class="mx-auto h-10 w-auto"
+          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+          alt="Your Company"
+        />
+        <h2
+          class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white"
+        >
+          Register here
+        </h2>
+      </div>
+
+      <div
+        id="error"
+        class="text-center mt-4 bg-red-500 text-white py-2 hidden"
+      ></div>
+
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form class="space-y-6" id="register-form">
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium leading-6 text-white"
+              >Email address</label
+            >
+            <div class="mt-2">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="iLoveJs@truth.com"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <label
+                for="password"
+                class="block text-sm font-medium leading-6 text-white"
+                >Password</label
+              >
+            </div>
+            <div class="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <label
+                for="confirm-password"
+                class="block text-sm font-medium leading-6 text-white"
+                >Confirm Password</label
+              >
+            </div>
+            <div class="mt-2">
+              <input
+                id="confirm-password"
+                name="confirm-password"
+                type="password"
+                required
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="flex w-full gap-x-2 justify-center items-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 disabled:bg-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <span>Register</span>
+              <svg
+                id="loading-spinner"
+                class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
